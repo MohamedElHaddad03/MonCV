@@ -4,4 +4,27 @@ html , button , input,select,textarea{
 html{
     font-size: 1em;
     height: 1.4;
+    background-color: #777;
+
+}
+
+.wrapper{
+    max-width: 900px;
+    min-width: 320px;
+    margin-right: auto;
+    margin-left: auto;
+
+
+}
+
+ img {
+    max-width: 300px;                
+    width: auto;          
+    height: auto;          
+    border-radius: 3px;             
+    background-color: white;       
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    float: right;  
+    top: 0;
+    
 }
