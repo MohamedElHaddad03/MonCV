@@ -17,7 +17,8 @@ html{
 
 }
 
- img {
+
+.header img {
     max-width: 300px;                
     width: auto;          
     height: auto;          
