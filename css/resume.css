@@ -168,3 +168,23 @@ footer p {
     font-size: 0.9em;
     margin-top: 10px;
 }
+
+
+.btn-detail {
+    background-color: #b56f1d; 
+    color: white; 
+    border: none; 
+    border-radius: 15px; 
+    padding: 5px 10px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.btn-detail:hover {
+    background-color: #0056b3; 
+}
+
+.btn-detail:focus {
+    outline: none; 
+}

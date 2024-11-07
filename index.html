@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr" itemscope itemtype="https://schema.org/Person">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -10,10 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="wrapper" class="wrapper" itemprop="mainEntityOfPage" itemscope itemtype="https://schema.org/CreativeWork">
 
@@ -23,7 +26,10 @@
             <h2 itemprop="jobTitle">Élève ingénieur en informatique</h2>
             <div>
                 <p itemprop="description">
-                    Passionné par le cloud computing et le DevOps, avec une expérience pratique en automatisation, CI/CD, Docker, Kubernetes et AWS. Désireux d'appliquer mes compétences en programmation, administration système et gestion de bases de données pour construire des solutions cloud évolutives et efficaces.
+                    Passionné par le cloud computing et le DevOps, avec une expérience pratique en automatisation,
+                    CI/CD, Docker, Kubernetes et AWS. Désireux d'appliquer mes compétences en programmation,
+                    administration système et gestion de bases de données pour construire des solutions cloud évolutives
+                    et efficaces.
                 </p>
             </div>
         </div>
@@ -32,21 +38,25 @@
             <div class="colonne-droite">
                 <article id="Contact" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
                     <dl>
-                         <h3>Contact</h3>
+                        <h3>Contact</h3>
                     </dl>
-                   
+
                     <ul>
                         <li>
-                            <p><i class="fa fa-map-marker"></i> <span class="title">Adresse</span>: <span itemprop="address">Cité universitaire Kergoat Brest</span></p>
+                            <p><i class="fa fa-map-marker"></i> <span class="title">Adresse</span>: <span
+                                    itemprop="address">Cité universitaire Kergoat Brest</span></p>
                         </li>
                         <li>
-                            <p><i class="fa fa-calendar"></i> <span class="title">Date de naissance</span>: <span itemprop="birthDate">03 Avril 2003</span></p>
+                            <p><i class="fa fa-calendar"></i> <span class="title">Date de naissance</span>: <span
+                                    itemprop="birthDate">03 Avril 2003</span></p>
                         </li>
                         <li>
-                            <p><i class="fa fa-envelope"></i> <span class="title">Email</span>: <span itemprop="email">ELHADDADM800@GMAIL.COM</span></p>
+                            <p><i class="fa fa-envelope"></i> <span class="title">Email</span>: <span
+                                    itemprop="email">ELHADDADM800@GMAIL.COM</span></p>
                         </li>
                         <li>
-                            <p><i class="fa fa-flag"></i> <span class="title">Nationalité</span>: <span>Marocain</span></p>
+                            <p><i class="fa fa-flag"></i> <span class="title">Nationalité</span>: <span>Marocain</span>
+                            </p>
                         </li>
                     </ul>
                 </article>
@@ -103,52 +113,62 @@
                 <article id="formation">
                     <dl id="formation">
                         <h3>Formation</h3>
-                        <dt>LYCÉE MOULAY MOHAMED BEN ABDELLAH</dt>
-                        <dd>
+                        <dt>LYCÉE MOULAY MOHAMED BEN ABDELLAH <button class="btn-detail">+</button></dt>
+                        <dd id="details1" style="display: none;">
                             Diplôme baccalauréat internationale spécialité science et mathématiques option B mention
                             bien.
                         </dd>
-                        <dt>ECOLE NATIONNALE DES SCIENCES APPLIQUÉES TANGER</dt>
-                        <dd>
+                        <dt>ECOLE NATIONNALE DES SCIENCES APPLIQUÉES TANGER <button class="btn-detail">+</button></dt>
+                        <dd id="details2" style="display: none;">
+                            Première et deuxième année du cycle d'ingénieur
                             Première et deuxième année du cycle préparatoire
                         </dd>
-                        <dt>Université Bretagne Occidentale</dt>
-                        <dd>
+                        <dt>Université Bretagne Occidentale <button class="btn-detail">+</button></dt>
+                        <dd id="details3" style="display: none;">
                             Master Développement lOgiciel et Système d’information
                         </dd>
+
                     </dl>
                 </article>
                 <article id="expériencePro">
 
                     <dl>
                         <h3>Expériences Professionnelle</h3>
-                        <dt>Stage d'observation</dt>
+                        <dt>Stage d'observation </dt>
                         <dd>
-                            <span class="subtitle-article">14/07/2023 - 26/08/2023 | Association Moroccan Writters
+                            <span class="subtitle-article">14/07/2023 - 26/08/2023 | Association Moroccan Writters<button class="btn-detail" onclick="afficher_detail()">+</button>
                             </span>
-                            Conception et réalisation d'une application web dédiée à l'e-learning,"M-1".
-                            Outils/langages utilisés: JavaSpringBoot ,reactJs, FireBase, PostgreSQL
+                            <span id="detail-pro1" style="display: none;">Conception et réalisation d'une application web
+                                dédiée à l'e-learning,"M-1".
+                                <br/>Outils/langages utilisés: JavaSpringBoot ,reactJs, FireBase, PostgreSQL</span>
                         </dd>
-                        <dt>Projets académiques:</dt>
+                        <dt>Projets académiques: </dt>
                         <dd>
                             <span class="subtitle-article"> 01/04/2023-18/06/2023 : Responsable de la sécurité
-                                applicative</span>
-                            Conception, développement et déploiement d'une application web automatisant le paiement des
-                            vacations et des heures supplémentaires des enseignants.
-                            Outils/langages utilisés : Laravel ,vuejs , jira, github, PostgreSql
+                                applicative <button class="btn-detail" onclick="afficher_detail()">+</button></span>
+
+                            <span id="detail-pro2" style="display: none;">Conception, développement et déploiement d'une
+                                application web automatisant le paiement des
+                                vacations et des heures supplémentaires des enseignants. 
+                                <br/><u>Outils/langages utilisés  :</u> Laravel ,vuejs , jira, github, PostgreSql</span>
                         </dd>
                         <dd>
-                            <span class="subtitle-article">05/12/2023-01/02/2024 : Chef de projet</span>
-                            Développement et déploiement d'une application mobile de gestion de syndic de copropriété.
-                            Outils/langages utilisés : jira , github, react native , docker , django , AWS
+                            <span class="subtitle-article">05/12/2023-01/02/2024 : Chef de projet <button
+                                    class="btn-detail" onclick="afficher_detail()">+</button></span>
+                            <span id="detail-pro3" style="display: none;">Développement et déploiement d'une application
+                                mobile de gestion de syndic de copropriété.
+                                <br/><u>Outils/langages utilisés  :</u> jira , github, react native , docker , django , AWS</span>
                         </dd>
                         <dd>
                             <span class="subtitle-article">
-                                05/12/2023-01/02/2024 : Chef de projet</span>
-                            Développement et déploiement d'une application de co-travail intra-entreprise basée sur une
-                            architecture de microservices.
-                            Outils/langages utilisés : jira , github / github actions , docker , Kubernetes, AWS , Azure
-                            AKS , .NET , Laravel , Django
+                                05/12/2023-01/02/2024 : Chef de projet <button class="btn-detail"
+                                    onclick="afficher_detail()">+</button></span>
+                            <span id="detail-pro4" style="display: none;">Développement et déploiement d'une application de
+                                co-travail intra-entreprise basée sur une
+                                architecture de microservices.
+                                <br/><u>Outils/langages utilisés  :</u> jira , github / github actions , docker , Kubernetes, AWS ,
+                                Azure
+                                AKS , .NET , Laravel , Django</span>
                         </dd>
 
 
@@ -201,17 +221,24 @@
 
             </div>
         </div>
-   
 
-    <footer>
-        <ul>
-            <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com" itemprop="sameAs">Facebook</a></li>
-            <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohamed-el-haddad-671771235/" itemprop="sameAs">LinkedIn</a></li>
-            <li><i class="fab fa-github"></i> <a href="https://github.com/MohamedElHaddad03" itemprop="sameAs">Github</a></li>
-            <li><i class="fab fa-gitlab"></i> <a href="https://gitlab.com/elhaddadm800" itemprop="sameAs">Gitlab</a></li>
 
-        </ul>
-        <p>Merci pour l'intérêt porté à mon profil. Ce CV résume mes compétences et mon parcours pour un éventuel futur collaboratif.</p>
-    </footer> </div>
+        <footer>
+            <ul>
+                <li><i class="fab fa-facebook"></i> <a href="https://www.facebook.com" itemprop="sameAs">Facebook</a>
+                </li>
+                <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/mohamed-el-haddad-671771235/"
+                        itemprop="sameAs">LinkedIn</a></li>
+                <li><i class="fab fa-github"></i> <a href="https://github.com/MohamedElHaddad03"
+                        itemprop="sameAs">Github</a></li>
+                <li><i class="fab fa-gitlab"></i> <a href="https://gitlab.com/elhaddadm800" itemprop="sameAs">Gitlab</a>
+                </li>
+
+            </ul>
+            <p>Merci pour l'intérêt porté à mon profil. Ce CV résume mes compétences et mon parcours pour un éventuel
+                futur collaboratif.</p>
+        </footer>
+    </div>
 </body>
+
 </html>
