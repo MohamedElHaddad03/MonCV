@@ -69,4 +69,92 @@ document.addEventListener('DOMContentLoaded', () => {
             tooltipText.style.top = top - rect.top + 'px';
             });
     });
+
+const langprog = [
+    { skill: 'C', rating: 4 },
+    { skill: 'C++', rating: 4 },
+    { skill: 'SQL/PLSQL', rating: 5 },
+    { skill: 'C#', rating: 4 },
+    { skill: 'PHP', rating: 3 }
+];
+
+const devMob = [
+    { skill: 'HTML', rating: 5 },
+    { skill: 'CSS', rating: 5 },
+    { skill: 'JavaScript', rating: 5 },
+    { skill: 'Frameworks (Laravel)', rating: 4 },
+    { skill: 'Frameworks (React.js)', rating: 5 },
+    { skill: 'Frameworks (Java Spring Boot)', rating: 4 },
+    { skill: 'Frameworks (React Native)', rating: 4 },
+    { skill: 'Frameworks (Django)', rating: 3 }
+];
+
+const sysAdmin = [
+    { skill: 'Windows Server 2019', rating: 4 },
+    { skill: 'Linux', rating: 5 }
+];
+
+const containerization = [
+    { skill: 'Docker', rating: 4 },
+    { skill: 'Kubernetes', rating: 5 }
+];
+
+const dbAdmin = [
+    { skill: 'Oracle', rating: 4 },
+    { skill: 'PgSql', rating: 4 },
+    { skill: 'MySql', rating: 4 }
+];
+
+const noSqlDB = [
+    { skill: 'MongoDb', rating: 4 },
+    { skill: 'Neo4j', rating: 3 }
+];
+
+const projMgmt = [
+    { skill: 'Jira', rating: 4 },
+    { skill: 'Github', rating: 5 },
+    { skill: 'GitLab', rating: 4 }
+];
+
+const ciCdTools = [
+    { skill: 'Github Actions', rating: 4 },
+    { skill: 'Jenkins', rating: 4 },
+    { skill: 'Gitlab CI/CD', rating: 4 },
+    { skill: 'Ansible', rating: 3 }
+];
+
+function generateStarRating(rating) {
+    let stars = '';
+    for (let i = 0; i < rating; i++) {
+        stars += '<span style=" color: gold; ">★</span>';  
+    }
+    for (let i = rating; i < 5; i++) {
+        stars += '<span style="color: gold;">☆</span>';  
+    }
+    return stars;
+}
+
+function displayRatings(categoryName, containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ''; 
+
+    categoryName.forEach(skillObj => {
+        const skillElement = document.createElement('div');
+        skillElement.style.display ="flex-box"
+
+        skillElement.innerHTML = `${skillObj.skill}: ${generateStarRating(skillObj.rating)}`;
+        container.appendChild(skillElement);
+    });
+}
+
+displayRatings(langprog, 'langprogContainer');
+displayRatings(devMob, 'devMobContainer');
+displayRatings(sysAdmin, 'sysAdminContainer');
+displayRatings(containerization, 'containerizationContainer');
+displayRatings(dbAdmin, 'dbAdminContainer');
+displayRatings(noSqlDB, 'noSqlDBContainer');
+displayRatings(projMgmt, 'projMgmtContainer');
+displayRatings(ciCdTools, 'ciCdToolsContainer');
+
+
 });    
