@@ -196,30 +196,34 @@ footer p {
     transition: height 0.5s ease-in-out;  
 }
 
-/* Style de base pour le tooltip */
+
 .tooltip {
-    position: relative;
+    position: relative; 
     cursor: pointer;
     display: inline-block;
+    width: 300px;
 }
 
-/* Style de la description qui apparaîtra */
 .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
+
+    position: absolute; 
+    width: 300px; 
+    visibility: hidden;       
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;       
     padding: 5px;
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity 0.3s;
+    border-radius: 5px;
+    z-index: 1;        
+    pointer-events: none; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s ease;
 }
 
-/* Tooltip visible lors du survol */
-.tooltip:hover .tooltiptext {
+
+
+.tooltip .tooltiptext.visible {
     visibility: visible;
     opacity: 1;
+    transform: scale(1.1);  
 }
+

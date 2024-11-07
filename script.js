@@ -41,8 +41,32 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', afficher_detail);
     });
 
-});
+    const tooltips = document.querySelectorAll('.tooltip');
 
-
-
-
+    tooltips.forEach(tooltip => {
+        const tooltipText = tooltip.querySelector('.tooltiptext');
+    
+        tooltip.addEventListener('mouseenter', function() {
+            tooltipText.classList.add('visible'); 
+        });
+    
+        tooltip.addEventListener('mouseleave', function() {
+            tooltipText.classList.remove('visible');
+        });
+    
+        tooltip.addEventListener('mousemove', function(event) {
+            const mouseX = event.pageX;
+            const mouseY = event.pageY;
+    
+       
+            let left = mouseX + 10; 
+            let top = mouseY + 10;  
+    
+    
+            let rect = tooltipText.getBoundingClientRect(); 
+    
+            tooltipText.style.left = left - rect.left + 'px';
+            tooltipText.style.top = top - rect.top + 'px';
+            });
+    });
+});    
