@@ -188,3 +188,12 @@ footer p {
 .btn-detail:focus {
     outline: none; 
 }
+
+
+.detail { 
+    overflow: hidden;  
+    height: 0px;      
+    transition: height 0.5s ease-in-out;  
+}
+
+

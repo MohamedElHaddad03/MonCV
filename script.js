@@ -1,16 +1,15 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
     function afficher_detail(event) {
         const detailElements = document.querySelectorAll('[id*="detail"]');
         detailElements.forEach(element => {
             if (element !== event.target.parentElement.nextElementSibling) {
-                element.style.display = "none";  
+                element.style.height = "0px";  
             }
         });
 
         document.querySelectorAll('.btn-detail').forEach(button => {
-            button.textContent = "+";
+            button.textContent = "+";  
         });
 
         const detail = event.target.parentElement.nextElementSibling;
@@ -18,14 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Détail actuel:', detail);
         console.log('Détail affiché:', detail.style.display);
 
-        if (detail.style.display === "none" || detail.style.display === "") {
-            detail.style.display = "block";  
+        if (detail.style.height === "0px" || detail.style.height === "" ) {
+            //detail.style.display = "block";  
+            setTimeout(() => {
+                detail.style.height = `${detail.scrollHeight}px`; 
+            }, 10); 
             event.target.textContent = "-";  
             console.log('------------------------------------');
             console.log('Détail affiché');
             console.log('------------------------------------');
         } else {
-            detail.style.display = "none";  
+            detail.style.height = "0px";  
+          //  detail.style.display = "none";  
+
             event.target.textContent = "+";  
             console.log('------------------------------------');
             console.log('Détail masqué');
@@ -33,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Ajouter l'événement 'click' à tous les boutons avec la classe .btn-detail
     document.querySelectorAll('.btn-detail').forEach(button => {
         button.addEventListener('click', afficher_detail);
     });
