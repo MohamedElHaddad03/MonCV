@@ -1,75 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
-
+<html lang="fr" itemscope itemtype="https://schema.org/Person">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="/E=edge, chrome=1">
-    <title>Mon CV</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title itemprop="name">Mon CV</title>
     <meta name="description" content="A propos de moi">
-    <meta name="keywords" content="web, developer, resume" />
+    <meta name="keywords" content="web, developer, resume">
     <meta name="author" content="Mon nom">
-    <meta name="viewport" content="wiph=device-wiph, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/responsive.css">
-
-    <!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
-<![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Proxima+Nova&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="wrapper" class="wrapper">
-        <div id="header" class="header">
-            <img src="https://png.pngtree.com/png-clipart/20231216/original/pngtree-vector-office-worker-staff-avatar-employee-icon-png-image_13863941.png"
-                alt="Photo personnel" />
-            <h1>EL HADDAD Mohamed</h1>
-            <i class="icon-camera-retro"></i>
-            <h2>Eléve ingénieur en informatique</h2>
+    <div id="wrapper" class="wrapper" itemprop="mainEntityOfPage" itemscope itemtype="https://schema.org/CreativeWork">
+        <div id="header" class="header" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
+            <img src="https://png.pngtree.com/png-clipart/20231216/original/pngtree-vector-office-worker-staff-avatar-employee-icon-png-image_13863941.png" alt="Photo personnel" itemprop="image" />
+            <h1 itemprop="name">EL HADDAD Mohamed</h1>
+            <h2 itemprop="jobTitle">Élève ingénieur en informatique</h2>
             <div>
-
-
-                <p>
-                    Passionné par le cloud computing et le DevOps, avec une expérience pratique en automatisation,
-                    CI/CD,
-                    Docker, Kubernetes et AWS. Désireux d'appliquer mes compétences en programmation, administration
-                    système et
-                    gestion de bases de données pour construire des solutions cloud évolutives et efficaces. Motivé à
-                    impulser
-                    l'innovation et à améliorer continuellement les processus en tant qu'Ingénieur Cloud - DevOps.
+                <p itemprop="description">
+                    Passionné par le cloud computing et le DevOps, avec une expérience pratique en automatisation, CI/CD, Docker, Kubernetes et AWS. Désireux d'appliquer mes compétences en programmation, administration système et gestion de bases de données pour construire des solutions cloud évolutives et efficaces.
                 </p>
             </div>
         </div>
 
         <div id="contenu">
             <div class="colonne-droite">
-
-                <article id="Contact">
+                <article id="Contact" itemprop="contactPoint" itemscope itemtype="https://schema.org/ContactPoint">
                     <dl>
-                        <h3>Contact</h3>
+                         <h3>Contact</h3>
                     </dl>
-
+                   
                     <ul>
                         <li>
-                            <p><i class="fa fa-map-marker"></i> <span class="title">Adresse</span> : <span>Cité
-                                    universitaire Kergoat Brest</span></p>
+                            <p><i class="fa fa-map-marker"></i> <span class="title">Adresse</span>: <span itemprop="address">Cité universitaire Kergoat Brest</span></p>
                         </li>
                         <li>
-                            <p><i class="fa fa-calendar"></i> <span class="title">Date de naissance</span> : <span>03
-                                    Avril 2003</span></p>
+                            <p><i class="fa fa-calendar"></i> <span class="title">Date de naissance</span>: <span itemprop="birthDate">03 Avril 2003</span></p>
                         </li>
                         <li>
-                            <p><i class="fa fa-envelope"></i> <span class="title">Email</span> :
-                                <span>ELHADDADM800@GMAIL.COM</span>
-                            </p>
+                            <p><i class="fa fa-envelope"></i> <span class="title">Email</span>: <span itemprop="email">ELHADDADM800@GMAIL.COM</span></p>
                         </li>
                         <li>
-                            <p><i class="fa fa-flag"></i> <span class="title">Nationalité</span> : <span>Marocain</span>
-                            </p>
+                            <p><i class="fa fa-flag"></i> <span class="title">Nationalité</span>: <span>Marocain</span></p>
                         </li>
                     </ul>
                 </article>
+
                 <article id="compétences">
 
                     <dl id="langues">
@@ -117,8 +97,8 @@
 
                 </article>
             </div>
-            <div class="colonne-gauche">
 
+            <div class="colonne-gauche">
                 <article id="formation">
                     <dl id="formation">
                         <h3>Formation</h3>
@@ -216,21 +196,15 @@
 
             </div>
         </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="https://www.facebook.com" itemprop="sameAs">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/mohamed-el-haddad-671771235/" itemprop="sameAs">LinkedIn</a></li>
+            <li><a href="https://github.com/MohamedElHaddad03" itemprop="sameAs">Github</a></li>
+        </ul>
+        <p>Merci pour l'intérêt porté à mon profil. Ce CV résume mes compétences et mon parcours pour un éventuel futur collaboratif.</p>
+    </footer>
 </body>
-<footer>
-    <ul>
-        <li><a href="https://www.facebook.com">Facebook</a></li>
-        <li><a href="https://www.linkedin.com/in/mohamed-el-haddad-671771235/">LinkedIn</a></li>
-
-        <li><a href="https://github.com/MohamedElHaddad03/MohamedElHaddad03">Github</a></li>
-
-        <li><a href="https://www.twitter.com">Twitter</a></li>
-
-        <li><a href="https://www.flickr.com">Flickr</a></li>
-
-    </ul>
-    <p>Merci pour l'intérêt porté à mon profil. Ce CV résume mes compétences et mon parcours pour un éventuel futur collaboratif.</p>
-</footer>
-</div>
-
 </html>
