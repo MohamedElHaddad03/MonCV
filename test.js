@@ -1,12 +1,9 @@
-
 document.addEventListener('DOMContentLoaded', () => {
 
     function afficher_detail(event) {
         const detailElements = document.querySelectorAll('[id*="detail"]');
         detailElements.forEach(element => {
-            if (element !== event.target.parentElement.nextElementSibling) {
-                element.style.display = "none";  
-            }
+            element.style.display = "none";  
         });
 
         document.querySelectorAll('.btn-detail').forEach(button => {
@@ -15,25 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const detail = event.target.parentElement.nextElementSibling;
 
-        console.log('Détail actuel:', detail);
-        console.log('Détail affiché:', detail.style.display);
-
-        if (detail.style.display === "none" || detail.style.display === "") {
-            detail.style.display = "block";  
-            event.target.textContent = "-";  
+        if (detail.style.display == "none" ) {
+            detail.style.display = "block";
+            event.target.textContent = "-";
             console.log('------------------------------------');
-            console.log('Détail affiché');
+            console.log("-");
             console.log('------------------------------------');
         } else {
-            detail.style.display = "none";  
-            event.target.textContent = "+";  
+            detail.style.display = "none";
+            event.target.textContent = "+";
             console.log('------------------------------------');
-            console.log('Détail masqué');
+            console.log("+");
             console.log('------------------------------------');
         }
     }
 
-    // Ajouter l'événement 'click' à tous les boutons avec la classe .btn-detail
     document.querySelectorAll('.btn-detail').forEach(button => {
         button.addEventListener('click', afficher_detail);
     });
