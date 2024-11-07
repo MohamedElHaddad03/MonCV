@@ -38,6 +38,7 @@ body {
 
 .header img {
     width: 120px;
+    height: max-content;
     border-radius: 50%;
     margin-bottom: 15px;
 }
