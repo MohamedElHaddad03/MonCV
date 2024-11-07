@@ -5,8 +5,10 @@ deploy:
   stage: deploy
   script:
     - echo "Déploiement sur GitLab Pages"
+    - mkdir .public
+    - cp -r * .public/
   artifacts:
     paths:
-      - public
+      - .public
   only:
     - master
