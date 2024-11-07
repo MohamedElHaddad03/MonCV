@@ -196,4 +196,30 @@ footer p {
     transition: height 0.5s ease-in-out;  
 }
 
+/* Style de base pour le tooltip */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
 
+/* Style de la description qui apparaîtra */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip visible lors du survol */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
