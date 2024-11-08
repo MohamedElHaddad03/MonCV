@@ -157,4 +157,48 @@ displayRatings(projMgmt, 'projMgmtContainer');
 displayRatings(ciCdTools, 'ciCdToolsContainer');
 
 
+
+const languages = [
+    { skill: "Arabe", rating: 5 },
+    { skill: "Français", rating: 4 },
+    { skill: "Anglais", rating: 3 },
+
+];
+
+
+function drawHistogram() {
+    const canvas = document.getElementById("myChart");
+    const ctx = canvas.getContext("2d");
+    
+    const maxRating = 5;  
+    const barHeight = 10;  
+    const barSpacing = 30;  
+    const canvasWidth = 300;
+    const canvasHeight = languages.length * (barHeight + barSpacing) ;  
+
+     canvas.height = canvasHeight;  
+
+    languages.forEach((skillObj, index) => {
+        ctx.fillStyle = "#ddd";  
+        ctx.fillRect(0, index * (barHeight + barSpacing), canvasWidth, barHeight);
+        
+        const barWidth = (skillObj.rating / maxRating) * canvasWidth;  
+        ctx.fillStyle = "green";  
+        ctx.fillRect(0, index * (barHeight + barSpacing), barWidth, barHeight);  
+        
+        ctx.fillStyle = "black";
+
+        const textWidth = ctx.measureText(skillObj.skill).width; 
+        const xText = (canvasWidth - textWidth) / 2; 
+
+        const yText = index * (barHeight + barSpacing) - 5; 
+
+        ctx.fillText(skillObj.skill, xText, yText);
+    });
+}
+
+
+drawHistogram();
+
+
 });    
